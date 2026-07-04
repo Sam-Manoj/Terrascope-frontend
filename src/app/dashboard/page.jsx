@@ -39,7 +39,7 @@ export default function Dashboard() {
 
     try {
       // FIX 1: Updated the URL to perfectly match FastAPI's @app.post route
-      const response = await fetch("http://127.0.0.1:8000/api/v1/diagnose", {
+      const response = await fetch("https://terrascope-engine.onrender.com", {
         method: "POST",
         body: formData,
       });
