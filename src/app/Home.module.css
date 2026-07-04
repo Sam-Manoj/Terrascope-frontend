@@ -1,0 +1,159 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 40px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* --- HERO BOX --- */
+.heroBox {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--surface);
+  border-radius: 40px;
+  padding: 60px;
+  overflow: hidden;
+  min-height: 550px;
+  /* Paper-cut effect for the hero */
+  box-shadow: inset 10px 10px 30px rgba(0, 0, 0, 0.8), 
+              inset -10px -10px 30px rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.heroContent {
+  flex: 1.2;
+  z-index: 10;
+  max-width: 600px;
+}
+
+.title {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+
+.highlight {
+  color: var(--primary);
+  text-shadow: 0 0 20px rgba(180, 244, 75, 0.3); /* Ambient neon glow */
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.enterBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  background-color: var(--primary);
+  color: #000; /* Black text on neon background for contrast */
+  font-weight: 700;
+  border-radius: 30px;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.enterBtn:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 0 20px rgba(180, 244, 75, 0.4);
+}
+
+.heroVisual {
+  flex: 1;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  pointer-events: none;
+}
+
+/* --- BENTO BOX GRID --- */
+.sectionTitle {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-transform: uppercase;
+  color: var(--text-main);
+  margin-bottom: 40px;
+}
+
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+.bentoCard {
+  background-color: var(--background);
+  border-radius: 32px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* The exact Pure CSS "Paper-Cut" inset shadow effect */
+  box-shadow: inset 8px 8px 20px rgba(0, 0, 0, 0.9), 
+              inset -4px -4px 15px rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  transition: transform 0.3s ease;
+}
+
+.bentoCard:hover {
+  transform: translateY(-5px);
+}
+
+/* Bento Sizing Math */
+.bentoFull { grid-column: span 12; }
+.bentoLarge { grid-column: span 7; }
+.bentoSmall { grid-column: span 5; }
+.bentoThird { grid-column: span 4; }
+
+.cardIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+}
+
+.cardTitle {
+  font-family: var(--font-display), sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.02em;
+}
+
+.cardDesc {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments for the Bento Grid */
+@media (max-width: 1024px) {
+  .bentoLarge, .bentoSmall, .bentoThird { grid-column: span 6; }
+}
+@media (max-width: 768px) {
+  .heroBox { flex-direction: column; text-align: center; padding: 40px 20px; }
+  .heroVisual { width: 100%; position: relative; min-height: 400px; }
+  .bentoLarge, .bentoSmall, .bentoThird { grid-column: span 12; }
+}

@@ -1,0 +1,196 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 40px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+.header {
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  color: var(--text-main);
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.highlight {
+  color: var(--primary);
+  text-shadow: 0 0 15px rgba(180, 244, 75, 0.3);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.125rem;
+  margin-top: 16px;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* --- BENTO GRID SYSTEM --- */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background-color: var(--background);
+  border-radius: 32px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 8px 8px 20px rgba(0, 0, 0, 0.9), 
+              inset -4px -4px 15px rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.span12 { grid-column: span 12; }
+.span8 { grid-column: span 8; }
+.span4 { grid-column: span 4; }
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  color: var(--primary);
+}
+
+.cardTitle {
+  font-family: var(--font-display), sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--text-main);
+  letter-spacing: 0.02em;
+}
+
+/* --- CONTENT STYLING --- */
+.phaseList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.phaseItem {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background-color: rgba(255,255,255,0.02);
+  padding: 24px;
+  border-radius: 20px;
+}
+
+.phaseNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background-color: var(--primary);
+  color: #000;
+  font-weight: 900;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.phaseContent h4 {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.phaseContent p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.techStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.techItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.techItem span {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* --- DEVELOPER CREDITS --- */
+.devProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.devName {
+  font-family: var(--font-display), sans-serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.devRole {
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.devLinks {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: var(--surface);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.linkBtn:hover {
+  background-color: var(--primary);
+  color: #000;
+  border-color: var(--primary);
+  box-shadow: 0 0 15px rgba(180, 244, 75, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .span8, .span4 { grid-column: span 12; }
+}
+@media (max-width: 768px) {
+  .phaseItem { flex-direction: column; }
+}

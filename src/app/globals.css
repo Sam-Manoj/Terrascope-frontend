@@ -1,0 +1,21 @@
+:root {
+  --background: #0a0a0a; /* The new pure dark background */
+  --surface: #141414;
+  --border: #262626;
+  --primary: #b4f44b; /* The new ambient neon-green */
+  --primary-hover: #9ad43e;
+  --text-main: #f8fafc;
+  --text-muted: #a3a3a3;
+}
+
+/* Ensure body uses the pure dark background */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--text-main);
+  font-family: var(--font-body), sans-serif;
+  line-height: 1.5;
+}
+
+/* Keep the rest of your globals.css the same... */
