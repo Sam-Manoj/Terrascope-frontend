@@ -37,12 +37,11 @@ export default function Dashboard() {
     // FIX 2: Changed "image" to "file" to match FastAPI's UploadFile parameter
     formData.append("file", file); 
 
-    try {
-      // FIX 1: Updated the URL to perfectly match FastAPI's @app.post route
-      const response = await fetch("https://terrascope-engine.onrender.com", {
-        method: "POST",
-        body: formData,
-      });
+    // FIX: Added the specific route path that FastAPI is listening on
+const response = await fetch("https://terrascope-engine.onrender.com/api/v1/diagnose", {
+  method: "POST",
+  body: formData,
+});
 
       if (!response.ok) {
         throw new Error(`Engine rejected the scan. Status: ${response.status}`);
