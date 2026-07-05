@@ -74,7 +74,7 @@ const response = await fetch("https://terrascope-engine.onrender.com/api/v1/diag
       
       <div className={styles.header}>
         <h1 className={styles.title}>Diagnostic <span className={styles.highlight}>Terminal</span></h1>
-        <p className={styles.subtitle}>Upload botanical imagery for algorithmic chromatic analysis.</p>
+        <p className={styles.subtitle}>The FastAPI has been stopped to take request as the Developer has Suspended the service from requests for the time being.</p>
       </div>
 
       <div className={styles.bentoGrid}>
