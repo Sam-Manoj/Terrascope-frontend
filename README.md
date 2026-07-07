@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+```
+# 🌿 TerraScope: Web Client
 
-## Getting Started
+> **Chromatic health diagnostics and algorithmic remediation for urban botanists.**
 
-First, run the development server:
+TerraScope is an AI-powered diagnostic tool. Instead of relying solely on standard pattern recognition, TerraScope analyzes the exact biological color profile (Hex code) of a compromised leaf, diagnoses the deficiency or pathogen, and computes actionable, organic remediation steps.
+
+This repository contains the **Frontend Web Client**, engineered with Next.js and pure CSS. The heavy computational machine learning tasks are handled by a decoupled Python microservice.
+
+---
+
+## 🏗️ System Architecture
+
+TerraScope operates on a strict decoupled microservices architecture to ensure maximum speed, security, and accuracy:
+
+1. **Data Acquisition (This Repository):** Built on the Next.js Edge. The user uploads a high-resolution JPG/PNG. The frontend packages this imagery and securely transmits the binary payload over a stateless connection, ensuring zero local data retention.
+2. **Chromatic Extraction (Python Engine):** The dedicated backend isolates the localized cellular breakdown and extracts the chromatic signature.
+3. **Algorithmic Remediation:** The backend calculates severity and returns a targeted JSON remediation protocol back to this UI for instantaneous rendering.
+
+---
+
+## 💻 Tech Stack & UI Philosophy
+
+* **Framework:** Next.js (App Router) + React
+* **Styling:** Pure CSS Modules + CSS Variables
+* **Animation:** GSAP (GreenSock) + Native CSS Keyframes
+* **Icons:** Lucide React
+
+### Why Pure CSS?
+Tailwind CSS and other utility frameworks were intentionally stripped from this stack. This was done to prevent compilation conflicts and maintain absolute, programmatic control over the custom CSS variables and complex inset shadows. 
+
+The UI features a strict **12-column Bento-box grid**, a pure `#0a0a0a` deep dark background, a `#b4f44b` ambient neon-green glow, and a custom engineered **pure CSS "paper-cut" inset shadow effect**.
+
+---
+
+## ⚙️ Core Features
+
+* **The Diagnostic Uploader:** A stateless, drag-and-drop zone engineered to accept high-resolution botanical imagery.
+* **Results Dashboard:** Dynamically generates upon receiving the Python engine's payload. 
+  * **Hex Analysis Card:** Visually renders the exact biological color marker extracted from the leaf alongside its raw Hex code.
+  * **Remediation Zone:** Outlines the severity of the issue and provides organic, step-by-step recovery tactics.
+* **GSAP "PillNav":** A smooth, hardware-accelerated, dynamic-island-style navigation bar.
+* **Ambient Botanical Animations:** Features complex, mathematically generated 3D CSS glowing flower animations that scale to the hero container.
+
+---
+
+## 🚀 Getting Started
+
+To run the TerraScope Web Client locally:
+
+### 1. Clone the repository
+```bash
+git clone [https://github.com/Sam-Manoj/terrascope-web.git](https://github.com/Sam-Manoj/terrascope-web.git)
+cd terrascope-web
+
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+
+```
+
+### 3. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+*Note: To fully utilize the diagnostic features, this client must be run in tandem with the TerraScope Python Engine.*
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 👨‍💻 Developer Credits
 
-To learn more about Next.js, take a look at the following resources:
+**Designed & Engineered by Sam Manoj**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+*A specialized full-stack developer dedicated to building highly optimized, decoupled architectures and immersive user interfaces.*
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* **GitHub:** [@Sam-Manoj](https://github.com/Sam-Manoj)
+* **Portfolio:** [View Portfolio](https://sam-manoj-portfolio.vercel.app/)
 
-## Deploy on Vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
