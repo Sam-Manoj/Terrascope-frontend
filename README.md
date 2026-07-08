@@ -24,12 +24,6 @@ TerraScope operates on a strict decoupled microservices architecture to ensure m
 * **Styling:** Pure CSS Modules + CSS Variables
 * **Animation:** GSAP (GreenSock) + Native CSS Keyframes
 * **Icons:** Lucide React
-
-### Why Pure CSS?
-Tailwind CSS and other utility frameworks were intentionally stripped from this stack. This was done to prevent compilation conflicts and maintain absolute, programmatic control over the custom CSS variables and complex inset shadows. 
-
-The UI features a strict **12-column Bento-box grid**, a pure `#0a0a0a` deep dark background, a `#b4f44b` ambient neon-green glow, and a custom engineered **pure CSS "paper-cut" inset shadow effect**.
-
 ---
 
 ## ⚙️ Core Features
