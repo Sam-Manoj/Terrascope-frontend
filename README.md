@@ -1,4 +1,4 @@
-# 🌿 TerraScope: Web Client
+# 🌿 TerraScope: Frontend
 
 > **Chromatic health diagnostics and algorithmic remediation for urban botanists.**
 
